@@ -1,0 +1,275 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "Simplex Inventory Model Schema",
+  "description": "POW <-> Simplex inventroy and status update object",
+  "definitions": {
+    "LocationModel": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Geo Location data",
+      "additionalProperties": false,
+      "properties": {
+        "Latitude": {
+          "type": "number"
+        },
+        "Longitude": {
+          "type": "number"
+        },
+        "Altitude": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "Latitude",
+        "Longitude"
+      ]
+    },
+    "PlacementInfo": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Placement stages and status",
+      "properties": {
+        "Location": {
+          "$ref": "#/definitions/LocationModel"
+        },
+        "LastModified": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "Stage": {
+          "type": "string",
+          "enum": [
+            "Drop",
+            "StartLowering",
+            "HookRelease",
+            "UserApprove"
+          ]
+        },
+        "Status": {
+          "type": "string",
+          "enum": [
+            "Fail",
+            "Pass"
+          ]
+        }
+      },
+      "required": [
+        "Location",
+        "LastModified",
+        "Stage",
+        "Status"
+      ]
+    },
+    "SensorTypeInfo": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "SensorTypeID": {
+          "type": "integer",
+          "description": "ID of sensor 0=REN, 1=FEN, 2=Seismic, 100=FEN3xAA, 101=REN3xAA, 102=Gemstone3xAA, 103=Quartz3xAA, 104=FEN1D, 105=REN1D, 106=Gemstone1D, 107=Quartz1D, 200=SeismicInsertion"
+        },
+        "SensorTypeName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Description of sensor - for user readability only"
+        },
+        "PodTypeID": {
+          "type": "integer",
+          "description": "ID of pod   0=Toss, 1=LowerByWire, 2=Inserted"
+        },
+        "PodTypeName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Description of pod - for user readability only"
+        }
+      },
+      "required": [
+        "SensorTypeID",
+        "PodTypeID"
+      ]
+    },
+    "FlightInfo": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "FlightID": {
+          "type": "integer",
+          "description": "Flight number/identification"
+        },
+        "FlightDescription": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Flight description / comments"
+        },
+        "DroneID": {
+          "type": "integer",
+          "description": "Drone ID number"
+        },
+        "PodID": {
+          "type": "integer",
+          "description": "Pod ID number"
+        },
+        "PodCell": {
+          "type": "integer",
+          "description": "Pod Cell index where the node was placed"
+        }
+      },
+      "required": [
+        "FlightID",
+        "DroneID",
+        "PodID",
+        "PodCell"
+      ]
+    },
+    "SimplexNodeModel": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Index": {
+          "type": "integer",
+          "description": "index of the Node device - used to sync results with original plan - do not change!"
+        },
+        "SensorType": {
+          "$ref": "#/definitions/SensorTypeInfo"
+        },
+        "Comment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Location": {
+          "$ref": "#/definitions/LocationModel"
+        },
+        "DropHeightAGL": {
+          "type": "number",
+          "description": "Height in meters to drop / start lowering the node"
+        },
+        "Priority": {
+          "type": "number",
+          "description": "Heigher priority numbers should have precedence - T.B.D"
+        },
+        "ActuallNodeID": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Actuall NodeID reported from the POD"
+        },
+        "ActuallPlacement": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Actuall placement information for the Node",
+          "items": {
+            "$ref": "#/definitions/PlacementInfo"
+          }
+        }
+      },
+      "required": [
+        "Index",
+        "SensorType",
+        "Location",
+        "DropHeightAGL",
+        "ActuallNodeID",
+        "ActuallPlacement"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "PlanID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "General GUID created to identify the Plan"
+    },
+    "Nodes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of nodes in the plan",
+      "items": {
+        "$ref": "#/definitions/SimplexNodeModel"
+      }
+    },
+    "CreationTime": {
+      "type": "string",
+      "description": "Date and Time the Plan was created",
+      "format": "date-time"
+    },
+    "LastUpdateTime": {
+      "type": "string",
+      "description": "Date and Time the Plan was last modified",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "PlanID",
+    "Nodes",
+    "CreationTime",
+    "LastUpdateTime"
+  ],
+  "title": "",
+  "examples": [
+    {
+      "PlanID": "string",
+      "Nodes": [
+        {
+          "Index": 0,
+          "SensorType": {
+            "SensorTypeID": 0,
+            "SensorTypeName": "string",
+            "PodTypeID": 0,
+            "PodTypeName": "string"
+          },
+          "Comment": "string",
+          "Location": {
+            "Latitude": 0,
+            "Longitude": 0,
+            "Altitude": 0
+          },
+          "DropHeightAGL": 0,
+          "Priority": 0,
+          "ActuallNodeID": 0,
+          "ActuallPlacement": [
+            {
+              "Location": {
+                "Latitude": 0,
+                "Longitude": 0,
+                "Altitude": 0
+              },
+              "LastModified": "2019-08-24T14:15:22Z",
+              "Stage": "Drop",
+              "Status": "Fail"
+            }
+          ]
+        }
+      ],
+      "CreationTime": "2019-08-24T14:15:22Z",
+      "LastUpdateTime": "2019-08-24T14:15:22Z"
+    }
+  ]
+}
