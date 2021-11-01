@@ -1,0 +1,27 @@
+{
+  "title": "LocationModel",
+  "type": [
+    "object",
+    "null"
+  ],
+  "description": "Geo Location data",
+  "additionalProperties": false,
+  "properties": {
+    "Latitude": {
+      "type": "number"
+    },
+    "Longitude": {
+      "type": "number"
+    },
+    "Altitude": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "Latitude",
+    "Longitude"
+  ]
+}

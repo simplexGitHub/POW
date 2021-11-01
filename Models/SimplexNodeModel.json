@@ -1,0 +1,58 @@
+{
+  "title": "SimplexNodeModel",
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "Index": {
+      "type": "integer",
+      "description": "index of the Node device - used to sync results with original plan - do not change!"
+    },
+    "SensorType": {
+      "$ref": "./SensorTypeInfo.json"
+    },
+    "Comment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Location": {
+      "$ref": "./LocationModel.json"
+    },
+    "DropHeightAGL": {
+      "type": "number",
+      "description": "Height in meters to drop / start lowering the node"
+    },
+    "Priority": {
+      "type": "number",
+      "description": "Heigher priority numbers should have precedence - T.B.D"
+    },
+    "ActuallNodeID": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Actuall NodeID reported from the POD"
+    },
+    "ActuallPlacement": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Actuall placement information for the Node",
+      "items": {
+        "$ref": "./PlacementInfo.json"
+      }
+    }
+  },
+  "required": [
+    "Index",
+    "SensorType",
+    "Location",
+    "DropHeightAGL",
+    "ActuallNodeID",
+    "ActuallPlacement"
+  ]
+}

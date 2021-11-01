@@ -1,0 +1,39 @@
+{
+  "title": "PlacementInfo",
+  "type": [
+    "object",
+    "null"
+  ],
+  "description": "Placement stages and status",
+  "properties": {
+    "Location": {
+      "$ref": "./LocationModel.json"
+    },
+    "LastModified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "Stage": {
+      "type": "string",
+      "enum": [
+        "Drop",
+        "StartLowering",
+        "HookRelease",
+        "UserApprove"
+      ]
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "Fail",
+        "Pass"
+      ]
+    }
+  },
+  "required": [
+    "Location",
+    "LastModified",
+    "Stage",
+    "Status"
+  ]
+}

@@ -197,41 +197,6 @@
     }
   },
   "type": "object",
-  "properties": {
-    "PlanID": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "description": "General GUID created to identify the Plan"
-    },
-    "Nodes": {
-      "type": [
-        "array",
-        "null"
-      ],
-      "description": "List of nodes in the plan",
-      "items": {
-        "$ref": "#/definitions/SimplexNodeModel"
-      }
-    },
-    "CreationTime": {
-      "type": "string",
-      "description": "Date and Time the Plan was created",
-      "format": "date-time"
-    },
-    "LastUpdateTime": {
-      "type": "string",
-      "description": "Date and Time the Plan was last modified",
-      "format": "date-time"
-    }
-  },
-  "required": [
-    "PlanID",
-    "Nodes",
-    "CreationTime",
-    "LastUpdateTime"
-  ],
   "title": "",
   "examples": [
     {
@@ -271,5 +236,40 @@
       "CreationTime": "2019-08-24T14:15:22Z",
       "LastUpdateTime": "2019-08-24T14:15:22Z"
     }
+  ],
+  "properties": {
+    "PlanID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "General GUID created to identify the Plan"
+    },
+    "Nodes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "List of nodes in the plan",
+      "items": {
+        "$ref": "./SimplexNodeModel.json"
+      }
+    },
+    "CreationTime": {
+      "type": "string",
+      "description": "Date and Time the Plan was created",
+      "format": "date-time"
+    },
+    "LastUpdateTime": {
+      "type": "string",
+      "description": "Date and Time the Plan was last modified",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "PlanID",
+    "Nodes",
+    "CreationTime",
+    "LastUpdateTime"
   ]
 }
