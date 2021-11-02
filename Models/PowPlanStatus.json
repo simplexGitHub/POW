@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "$id": "Simplex Inventory Model Schema",
-  "description": "POW <-> Simplex inventroy and status update object",
+  "description": "Flightops inventroy and status update object",
   "definitions": {
     "LocationModel": {
       "type": [
@@ -197,22 +197,17 @@
     }
   },
   "type": "object",
+  "title": "",
   "properties": {
     "PlanID": {
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": "string",
       "description": "General GUID created to identify the Plan"
     },
     "Nodes": {
-      "type": [
-        "array",
-        "null"
-      ],
+      "type": "array",
       "description": "List of nodes in the plan",
       "items": {
-        "$ref": "#/definitions/SimplexNodeModel"
+        "$ref": "./StatusNode.json"
       }
     },
     "CreationTime": {
@@ -231,6 +226,5 @@
     "Nodes",
     "CreationTime",
     "LastUpdateTime"
-  ],
-  "title": ""
+  ]
 }

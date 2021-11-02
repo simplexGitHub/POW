@@ -1,9 +1,6 @@
 {
   "title": "LocationModel",
-  "type": [
-    "object",
-    "null"
-  ],
+  "type": "object",
   "description": "Geo Location data",
   "additionalProperties": false,
   "properties": {
@@ -14,10 +11,8 @@
       "type": "number"
     },
     "Altitude": {
-      "type": [
-        "number",
-        "null"
-      ]
+      "type": "number",
+      "description": "If no altitude then FlightOps will take the alt from DTM. "
     }
   },
   "required": [

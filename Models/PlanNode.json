@@ -1,0 +1,34 @@
+{
+  "title": "PlanNode",
+  "type": "object",
+  "description": "One sensor plan",
+  "properties": {
+    "Index": {
+      "type": "integer",
+      "description": "index of the Node device - used to sync results with original plan - do not change!"
+    },
+    "SensorType": {
+      "$ref": "./SensorTypeInfo.json"
+    },
+    "Comment": {
+      "type": "string"
+    },
+    "Location": {
+      "$ref": "./LocationModel.json"
+    },
+    "DropHeightAGL": {
+      "type": "number",
+      "description": "Height in meters to drop / start lowering the node"
+    },
+    "Priority": {
+      "type": "number",
+      "description": "Heigher priority numbers should have precedence - T.B.D\nIf no priority field then the default priority will be chosen by Flightops"
+    }
+  },
+  "required": [
+    "Index",
+    "SensorType",
+    "Location",
+    "DropHeightAGL"
+  ]
+}

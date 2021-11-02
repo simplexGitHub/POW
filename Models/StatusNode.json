@@ -1,0 +1,33 @@
+{
+  "title": "StatusNode",
+  "type": "object",
+  "description": "The status of each plan node",
+  "properties": {
+    "PlanIndex": {
+      "type": "integer",
+      "description": "index of the Node device - used to sync results with original plan - do not change!"
+    },
+    "ActuallNodeID": {
+      "type": "integer",
+      "description": "Actuall NodeID reported from the POD"
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "Fail",
+        "Pass"
+      ]
+    },
+    "ActuallPlacement": {
+      "type": "array",
+      "description": "Actuall placement information for the Node.\nIf Status Fail - no need to send Actual Placement",
+      "items": {
+        "$ref": "./PlacementInfo.json"
+      }
+    }
+  },
+  "required": [
+    "PlanIndex",
+    "ActuallNodeID"
+  ]
+}

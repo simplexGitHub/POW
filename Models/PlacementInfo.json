@@ -1,39 +1,16 @@
 {
   "title": "PlacementInfo",
-  "type": [
-    "object",
-    "null"
-  ],
-  "description": "Placement stages and status",
+  "type": "object",
+  "description": "Placement status",
   "properties": {
     "Location": {
       "$ref": "./LocationModel.json"
     },
-    "LastModified": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "Stage": {
-      "type": "string",
-      "enum": [
-        "Drop",
-        "StartLowering",
-        "HookRelease",
-        "UserApprove"
-      ]
-    },
-    "Status": {
-      "type": "string",
-      "enum": [
-        "Fail",
-        "Pass"
-      ]
+    "placementTime": {
+      "$ref": "./GeneralTypes/Timestamp.json"
     }
   },
   "required": [
-    "Location",
-    "LastModified",
-    "Stage",
-    "Status"
+    "placementTime"
   ]
 }
