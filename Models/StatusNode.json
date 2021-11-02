@@ -20,7 +20,7 @@
     },
     "ActuallPlacement": {
       "type": "array",
-      "description": "Actuall placement information for the Node.\nIf Status Fail - no need to send Actual Placement",
+      "description": "Actuall placement information for the Node.\n",
       "items": {
         "$ref": "./PlacementInfo.json"
       }
@@ -28,6 +28,7 @@
   },
   "required": [
     "PlanIndex",
-    "ActuallNodeID"
+    "ActuallNodeID",
+    "ActuallPlacement"
   ]
 }
