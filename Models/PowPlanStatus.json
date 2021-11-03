@@ -25,6 +25,9 @@
       "type": "string",
       "description": "Date and Time the Plan was last modified",
       "format": "date-time"
+    },
+    "": {
+      "type": "string"
     }
   },
   "required": [

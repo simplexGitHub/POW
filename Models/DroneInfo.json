@@ -1,0 +1,26 @@
+{
+  "title": "DroneInfo",
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "DroneID": {
+      "type": "integer",
+      "description": "Drone ID number"
+    },
+    "PodID": {
+      "type": "integer",
+      "description": "Pod ID number"
+    },
+    "PodCell": {
+      "type": "integer",
+      "description": "Pod Cell index where the node was placed"
+    }
+  },
+  "required": [
+    "DroneID",
+    "PodID",
+    "PodCell"
+  ]
+}

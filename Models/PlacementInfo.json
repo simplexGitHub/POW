@@ -6,11 +6,14 @@
     "Location": {
       "$ref": "./LocationModel.json"
     },
-    "placementTime": {
+    "PlacementTime": {
       "$ref": "./GeneralTypes/Timestamp.json"
+    },
+    "DroneInfo": {
+      "$ref": "./DroneInfo.json"
     }
   },
   "required": [
-    "placementTime"
+    "PlacementTime"
   ]
 }
