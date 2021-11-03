@@ -1,0 +1,17 @@
+{
+  "title": "Error",
+  "type": "object",
+  "properties": {
+    "ErrorType": {
+      "type": "string",
+      "enum": [
+        "GeneralFail",
+        "ValidationError"
+      ]
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "description": ""
+}

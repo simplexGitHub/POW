@@ -1,0 +1,76 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PlanAndStatus",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/updatePowPlan": {
+      "post": {
+        "summary": "updatePowPlan",
+        "operationId": "post-updatePowPlan",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../Models/GeneralTypes/asycResponse.json"
+                }
+              }
+            }
+          }
+        },
+        "description": "The POW planning system call FlightOps to save a POW mission plan. The Rest will be impemented at FlightOps",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../Models/PowPlan.json"
+              }
+            }
+          },
+          "description": "The plan as list of points (tasks)"
+        }
+      }
+    },
+    "/updatePowStatus": {
+      "parameters": [],
+      "post": {
+        "summary": "updatePowStatus",
+        "operationId": "post-updatePowStatus",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../Models/GeneralTypes/asycResponse.json"
+                }
+              }
+            }
+          }
+        },
+        "description": "The final status of the pow mission. The Rest api will be implemented by POW plan ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../Models/PowPlanStatus.json"
+              }
+            }
+          },
+          "description": "The final status of the pow plan"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}

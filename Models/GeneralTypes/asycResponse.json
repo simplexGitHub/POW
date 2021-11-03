@@ -1,0 +1,22 @@
+{
+  "title": "asycResponse",
+  "type": "object",
+  "description": "General A-Sync Response",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    },
+    "Errors": {
+      "type": "array",
+      "items": {
+        "$ref": "./Error.json"
+      }
+    }
+  },
+  "required": [
+    "success"
+  ]
+}
