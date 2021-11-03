@@ -6,18 +6,18 @@
       "type": "string",
       "description": "ID of sensor 0=REN, 1=FEN, 2=Seismic, 100=FEN3xAA, 101=REN3xAA, 102=Gemstone3xAA, 103=Quartz3xAA, 104=FEN1D, 105=REN1D, 106=Gemstone1D, 107=Quartz1D, 200=SeismicInsertion",
       "enum": [
-        "REN",
-        "FEN",
-        "Seismic",
-        "FEN3xAA",
-        "REN3xAA",
-        "Gemstone3xAA",
-        "Quartz3xAA",
-        "FEN1D",
-        "REN1D",
-        "Gemstone1D",
-        "Quartz1D",
-        "SesmicInsertion"
+        "1",
+        "2",
+        "3",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "200"
       ]
     },
     "SensorTypeName": {
