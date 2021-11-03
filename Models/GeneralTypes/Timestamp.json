@@ -1,5 +1,5 @@
 {
   "title": "Timestamp",
   "type": "string",
-  "description": "Timestamp format"
+  "description": "Timestamp format - Epoch   1970"
 }

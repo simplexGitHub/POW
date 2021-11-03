@@ -3,16 +3,35 @@
   "type": "object",
   "properties": {
     "SensorTypeID": {
-      "type": "integer",
-      "description": "ID of sensor 0=REN, 1=FEN, 2=Seismic, 100=FEN3xAA, 101=REN3xAA, 102=Gemstone3xAA, 103=Quartz3xAA, 104=FEN1D, 105=REN1D, 106=Gemstone1D, 107=Quartz1D, 200=SeismicInsertion"
+      "type": "string",
+      "description": "ID of sensor 0=REN, 1=FEN, 2=Seismic, 100=FEN3xAA, 101=REN3xAA, 102=Gemstone3xAA, 103=Quartz3xAA, 104=FEN1D, 105=REN1D, 106=Gemstone1D, 107=Quartz1D, 200=SeismicInsertion",
+      "enum": [
+        "REN",
+        "FEN",
+        "Seismic",
+        "FEN3xAA",
+        "REN3xAA",
+        "Gemstone3xAA",
+        "Quartz3xAA",
+        "FEN1D",
+        "REN1D",
+        "Gemstone1D",
+        "Quartz1D",
+        "SesmicInsertion"
+      ]
     },
     "SensorTypeName": {
       "type": "string",
       "description": "Description of sensor - for user readability only"
     },
     "PodTypeID": {
-      "type": "integer",
-      "description": "ID of pod   0=Toss, 1=LowerByWire, 2=Inserted"
+      "type": "string",
+      "description": "ID of pod   0=Toss, 1=LowerByWire, 2=Inserted",
+      "enum": [
+        "Toss",
+        "LowerByWire",
+        "Inserted"
+      ]
     },
     "PodTypeName": {
       "type": "string",
