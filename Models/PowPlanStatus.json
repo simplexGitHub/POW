@@ -33,7 +33,8 @@
       "type": "string",
       "enum": [
         "Running",
-        "Stopped"
+        "Aborted",
+        "Finished"
       ]
     },
     "PlanIdChecksum": {
