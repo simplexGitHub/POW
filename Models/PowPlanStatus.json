@@ -35,6 +35,9 @@
         "Running",
         "Stopped"
       ]
+    },
+    "PlanIdChecksum": {
+      "type": "number"
     }
   },
   "required": [
