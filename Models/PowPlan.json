@@ -61,6 +61,10 @@
     },
     "LastUpdateTime": {
       "$ref": "./GeneralTypes/Timestamp.json"
+    },
+    "name": {
+      "type": "string",
+      "description": "The plan name"
     }
   },
   "required": [
