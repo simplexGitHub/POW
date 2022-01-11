@@ -28,12 +28,20 @@
     },
     "": {
       "type": "string"
+    },
+    "missionStatus": {
+      "type": "string",
+      "enum": [
+        "Running",
+        "Stopped"
+      ]
     }
   },
   "required": [
     "PlanID",
     "Nodes",
     "CreationTime",
-    "LastUpdateTime"
+    "LastUpdateTime",
+    "missionStatus"
   ]
 }

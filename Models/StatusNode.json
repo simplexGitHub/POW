@@ -7,16 +7,18 @@
       "type": "integer",
       "description": "index of the Node device - used to sync results with original plan - do not change!"
     },
-    "ActuallNodeID": {
+    "sensorId": {
       "type": "integer",
-      "description": "Actuall NodeID reported from the POD"
+      "description": "Sensor External ID reported from the POD"
     },
     "Status": {
       "type": "string",
       "enum": [
         "Fail",
-        "Pass"
-      ]
+        "Pass",
+        "Aborted"
+      ],
+      "description": "The status of the sensor delivery"
     },
     "ActuallPlacement": {
       "type": "array",
@@ -28,7 +30,7 @@
   },
   "required": [
     "PlanIndex",
-    "ActuallNodeID",
+    "sensorId",
     "ActuallPlacement"
   ]
 }
