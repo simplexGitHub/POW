@@ -39,6 +39,12 @@
     },
     "PlanIdChecksum": {
       "type": "number"
+    },
+    "startSessionTime": {
+      "$ref": "./GeneralTypes/Timestamp.json"
+    },
+    "stopSeessionTime": {
+      "$ref": "./GeneralTypes/Timestamp.json"
     }
   },
   "required": [
