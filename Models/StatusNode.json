@@ -21,11 +21,7 @@
       "description": "The status of the sensor delivery"
     },
     "ActuallPlacement": {
-      "type": "array",
-      "description": "Actuall placement information for the Node.\n",
-      "items": {
-        "$ref": "./PlacementInfo.json"
-      }
+      "$ref": "./PlacementInfo.json"
     }
   },
   "required": [
