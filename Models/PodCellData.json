@@ -1,0 +1,20 @@
+{
+  "title": "PodCellData",
+  "type": "object",
+  "properties": {
+    "podIndex": {
+      "type": "number"
+    },
+    "sensorId": {
+      "type": "string"
+    },
+    "SensorTypeID": {
+      "$ref": "./SensorTypeID_enum.json"
+    }
+  },
+  "required": [
+    "podIndex",
+    "sensorId",
+    "SensorTypeID"
+  ]
+}

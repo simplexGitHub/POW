@@ -1,0 +1,33 @@
+{
+  "title": "PodSensorData",
+  "type": "object",
+  "examples": [
+    {
+      "podId": "string",
+      "podCells": [
+        {
+          "podIndex": 0,
+          "sensorId": "string",
+          "SensorTypeID": "1"
+        }
+      ]
+    }
+  ],
+  "properties": {
+    "podId": {
+      "type": "string",
+      "example": "pod_id_1"
+    },
+    "podCells": {
+      "type": "array",
+      "items": {
+        "$ref": "./PodCellData.json"
+      }
+    }
+  },
+  "required": [
+    "podId",
+    "podCells"
+  ],
+  "description": ""
+}

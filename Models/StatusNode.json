@@ -16,12 +16,17 @@
       "enum": [
         "Fail",
         "Pass",
-        "Aborted"
+        "Aborted",
+        "NotDone"
       ],
       "description": "The status of the sensor delivery"
     },
     "ActuallPlacement": {
       "$ref": "./PlacementInfo.json"
+    },
+    "updateTime": {
+      "type": "number",
+      "description": "Timestamp format - Epoch   1970"
     }
   },
   "required": [

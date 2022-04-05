@@ -68,6 +68,35 @@
           "description": "The final status of the pow plan"
         }
       }
+    },
+    "/getPowStatus": {
+      "post": {
+        "summary": "API for get current PowPlanStatus",
+        "operationId": "post-getPowStatuses",
+        "responses": {
+          "200": {
+            "description": "response: success: boolean; description: string (free text); data: PowPlanStatus",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../Models/GeneralTypes/asycResponse.json"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../Models/PowPlanId.json"
+              }
+            }
+          }
+        },
+        "description": "API for get current PowPlanStatus"
+      },
+      "parameters": []
     }
   },
   "components": {

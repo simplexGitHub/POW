@@ -1,0 +1,9 @@
+{
+  "title": "PowPlanId",
+  "type": "object",
+  "properties": {
+    "PlanID": {
+      "type": "string"
+    }
+  }
+}
