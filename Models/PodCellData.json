@@ -2,7 +2,7 @@
   "title": "PodCellData",
   "type": "object",
   "properties": {
-    "podIndex": {
+    "cellIndex": {
       "type": "number"
     },
     "sensorId": {
@@ -13,7 +13,7 @@
     }
   },
   "required": [
-    "podIndex",
+    "cellIndex",
     "sensorId",
     "SensorTypeID"
   ]
