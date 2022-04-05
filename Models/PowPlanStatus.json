@@ -79,8 +79,7 @@
       "$ref": "./GeneralTypes/Timestamp.json"
     },
     "updateTime": {
-      "type": "number",
-      "description": "Timestamp format - Epoch   1970"
+      "$ref": "./GeneralTypes/Timestamp.json"
     }
   },
   "required": [
