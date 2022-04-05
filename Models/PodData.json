@@ -1,5 +1,5 @@
 {
-  "title": "PodSensorData",
+  "title": "PodData",
   "type": "object",
   "examples": [
     {
@@ -13,6 +13,7 @@
       ]
     }
   ],
+  "description": "",
   "properties": {
     "podId": {
       "type": "string",
@@ -23,11 +24,13 @@
       "items": {
         "$ref": "./PodCellData.json"
       }
+    },
+    "podType": {
+      "type": "string"
     }
   },
   "required": [
     "podId",
     "podCells"
-  ],
-  "description": ""
+  ]
 }
