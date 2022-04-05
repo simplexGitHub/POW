@@ -31,6 +31,7 @@
   "required": [
     "PlanIndex",
     "sensorId",
-    "ActuallPlacement"
+    "ActuallPlacement",
+    "updateTime"
   ]
 }

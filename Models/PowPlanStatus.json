@@ -87,6 +87,7 @@
     "Nodes",
     "CreationTime",
     "LastUpdateTime",
-    "missionStatus"
+    "missionStatus",
+    "updateTime"
   ]
 }
