@@ -10,11 +10,15 @@
     },
     "SensorTypeID": {
       "$ref": "./SensorTypeID_enum.json"
+    },
+    "cellStatus": {
+      "type": "string"
     }
   },
   "required": [
     "cellIndex",
     "sensorId",
-    "SensorTypeID"
+    "SensorTypeID",
+    "cellStatus"
   ]
 }
