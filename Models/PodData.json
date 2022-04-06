@@ -26,11 +26,25 @@
       }
     },
     "podType": {
+      "type": "string",
+      "enum": [
+        "Toss",
+        "LowerByWire",
+        "Inserted"
+      ]
+    },
+    "technicalStatus": {
       "type": "string"
+    },
+    "updateTime": {
+      "$ref": "./GeneralTypes/Timestamp.json"
     }
   },
   "required": [
     "podId",
-    "podCells"
+    "podCells",
+    "podType",
+    "technicalStatus",
+    "updateTime"
   ]
 }
