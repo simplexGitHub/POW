@@ -30,5 +30,24 @@
     "SensorType",
     "Location",
     "DropHeightAGL"
+  ],
+  "examples": [
+    {
+      "Index": 0,
+      "SensorType": {
+        "SensorTypeID": "1",
+        "SensorTypeName": "string",
+        "PodTypeID": "Toss",
+        "PodTypeName": "string"
+      },
+      "Comment": "string",
+      "Location": {
+        "Latitude": 0,
+        "Longitude": 0,
+        "Altitude": 0
+      },
+      "DropHeightAGL": 0,
+      "Priority": 0
+    }
   ]
 }
