@@ -15,5 +15,20 @@
   },
   "required": [
     "PlacementTime"
+  ],
+  "examples": [
+    {
+      "Location": {
+        "Latitude": 0,
+        "Longitude": 0,
+        "Altitude": 0
+      },
+      "PlacementTime": 0,
+      "DroneInfo": {
+        "DroneID": 0,
+        "PodID": 0,
+        "PodCell": 0
+      }
+    }
   ]
 }

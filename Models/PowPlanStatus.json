@@ -71,7 +71,7 @@
     "startSessionTime": {
       "$ref": "./GeneralTypes/Timestamp.json"
     },
-    "stopSeessionTime": {
+    "stopSessionTime": {
       "$ref": "./GeneralTypes/Timestamp.json"
     },
     "updateTime": {
