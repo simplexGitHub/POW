@@ -3,7 +3,7 @@
   "$id": "Simplex Inventory Model Schema",
   "description": "Flightops inventroy and status update object",
   "type": "object",
-  "title": "",
+  "title": "PowPlanStatus",
   "examples": [
     {
       "PlanID": "string",
@@ -49,14 +49,10 @@
       }
     },
     "CreationTime": {
-      "type": "string",
-      "description": "Date and Time the Plan was created",
-      "format": "date-time"
+      "$ref": "./GeneralTypes/Timestamp.json"
     },
     "LastUpdateTime": {
-      "type": "string",
-      "description": "Date and Time the Plan was last modified",
-      "format": "date-time"
+      "$ref": "./GeneralTypes/Timestamp.json"
     },
     "name": {
       "type": "string"
