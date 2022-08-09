@@ -2,20 +2,6 @@
   "title": "PlacementInfo",
   "type": "object",
   "description": "Placement status",
-  "properties": {
-    "Location": {
-      "$ref": "./LocationModel.json"
-    },
-    "PlacementTime": {
-      "$ref": "./GeneralTypes/Timestamp.json"
-    },
-    "DroneInfo": {
-      "$ref": "./DroneInfo.json"
-    }
-  },
-  "required": [
-    "PlacementTime"
-  ],
   "examples": [
     {
       "Location": {
@@ -30,5 +16,16 @@
         "PodCell": 0
       }
     }
-  ]
+  ],
+  "properties": {
+    "Location": {
+      "$ref": "./LocationModel.json"
+    },
+    "PlacementTime": {
+      "$ref": "./GeneralTypes/Timestamp.json"
+    },
+    "DroneInfo": {
+      "$ref": "./DroneInfo.json"
+    }
+  }
 }
